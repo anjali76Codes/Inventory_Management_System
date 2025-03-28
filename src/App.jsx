@@ -1,10 +1,17 @@
-import React from "react";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import InventoryPage from './pages/InventoryPage';
+
 function App() {
-return (
-  <>
-  <h1>HOME</h1>
-  </>
-  )
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<InventoryPage />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
